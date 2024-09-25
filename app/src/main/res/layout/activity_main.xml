@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@drawable/basketball"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/a_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="Team A"
+        android:textColor="#FF8C00"
+        android:textSize="35sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/scoreA_tx"
+        app:layout_constraintEnd_toEndOf="@+id/scoreA_tx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/b_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Team B"
+        android:textColor="#FF8C00"
+        android:textSize="35sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/scoreB_tx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/a_tx"
+        app:layout_constraintStart_toStartOf="@id/scoreA_tx"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreA_tx"
+        style="@style/tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreB_tx"
+        style="@style/tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreA_tx"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_three_a_btn"
+        style="@style/btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#BF3104"
+        android:text="+3 Points"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreA_tx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreA_tx" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_three_b_btn"
+        style="@style/btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#BF3104"
+        android:text="+3 Points"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreB_tx"
+        app:layout_constraintStart_toEndOf="@+id/plus_three_a_btn"
+        app:layout_constraintTop_toBottomOf="@+id/scoreB_tx" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_two_a_btn"
+        style="@style/btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF9100"
+        android:text="+2 Points"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/plus_three_a_btn"
+        app:layout_constraintStart_toStartOf="@+id/plus_three_a_btn"
+        app:layout_constraintTop_toBottomOf="@+id/plus_three_a_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_two_b_btn"
+        style="@style/btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF9100"
+        android:text="+2 Points"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/plus_three_b_btn"
+        app:layout_constraintStart_toStartOf="@+id/plus_three_b_btn"
+        app:layout_constraintTop_toBottomOf="@+id/plus_three_b_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_one_a_btn"
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFC400"
+        android:text="FREE Throw"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/plus_two_a_btn"
+        app:layout_constraintStart_toStartOf="@+id/plus_two_a_btn"
+        app:layout_constraintTop_toBottomOf="@+id/plus_two_a_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_one_b_btn"
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#FFC400"
+        android:text="FREE Throw"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/plus_two_b_btn"
+        app:layout_constraintStart_toStartOf="@+id/plus_two_b_btn"
+        app:layout_constraintTop_toBottomOf="@+id/plus_two_b_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exit_btn"
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFEA00"
+        android:text="End Game"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/plus_one_b_btn"
+        app:layout_constraintStart_toStartOf="@+id/plus_one_a_btn"
+        app:layout_constraintTop_toBottomOf="@+id/plus_one_b_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rest_btn"
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FFEA00"
+        android:text="Reset"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exit_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
